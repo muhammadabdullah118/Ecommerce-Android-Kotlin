@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.ecomerce.views.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDashBoardFragment"
+        android:name="com.example.ecomerce.views.fragments.admin.AdminDashBoardFragment"
+        android:label="fragment_admin_dash_board"
+        tools:layout="@layout/fragment_admin_dash_board" >
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_adminDashBoardFragment_to_updateItemFragment"
+            app:destination="@id/updateItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerDashBoardFragment"
+        android:name="com.example.ecomerce.views.fragments.customer.CustomerDashBoardFragment"
+        android:label="fragment_customer_dash_board"
+        tools:layout="@layout/fragment_customer_dash_board" >
+        <action
+            android:id="@+id/action_customerDashBoardFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_customerDashBoardFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_customerDashBoardFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_customerDashBoardFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ecomerce.views.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_customerDashBoardFragment"
+            app:destination="@id/customerDashBoardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.ecomerce.views.fragments.customer.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.ecomerce.views.fragments.admin.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <action
+            android:id="@+id/action_addItemFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.ecomerce.views.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_customerDashBoardFragment"
+            app:destination="@id/customerDashBoardFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_orderPlaceFragment"
+            app:destination="@id/orderPlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.example.ecomerce.views.fragments.OrderHistoryFragment"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_order_history" >
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_customerDashBoardFragment"
+            app:destination="@id/customerDashBoardFragment" />
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.ecomerce.views.fragments.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" >
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.example.ecomerce.views.fragments.ItemDetailFragment"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" >
+        <action
+            android:id="@+id/action_itemDetailFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_customerDashBoardFragment"
+            app:destination="@id/customerDashBoardFragment" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_orderPlaceFragment"
+            app:destination="@id/orderPlaceFragment" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_updateItemFragment"
+            app:destination="@id/updateItemFragment" />
+        <argument
+            android:name="item"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_itemDetailFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateItemFragment"
+        android:name="com.example.ecomerce.views.fragments.admin.UpdateItemFragment"
+        android:label="fragment_update_item"
+        tools:layout="@layout/fragment_update_item" >
+        <action
+            android:id="@+id/action_updateItemFragment_to_adminDashBoardFragment"
+            app:destination="@id/adminDashBoardFragment" />
+        <action
+            android:id="@+id/action_updateItemFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <argument
+            android:name="items"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/orderPlaceFragment"
+        android:name="com.example.ecomerce.views.fragments.customer.OrderPlaceFragment"
+        android:label="fragment_order_place"
+        tools:layout="@layout/fragment_order_place" >
+        <action
+            android:id="@+id/action_orderPlaceFragment_to_orderSuccessFragment2"
+            app:destination="@id/orderSuccessFragment2" />
+        <action
+            android:id="@+id/action_orderPlaceFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_orderPlaceFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <argument
+            android:name="items"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessFragment2"
+        android:name="com.example.ecomerce.views.fragments.customer.OrderSuccessFragment"
+        android:label="fragment_order_success"
+        tools:layout="@layout/fragment_order_success" >
+        <action
+            android:id="@+id/action_orderSuccessFragment2_to_orderPlaceFragment"
+            app:destination="@id/orderPlaceFragment" />
+    </fragment>
+</navigation>

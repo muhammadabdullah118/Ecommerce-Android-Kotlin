@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ecomerce</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="don_t_have_an_account_signup">
+    <u>Don\'t have an Account? SignUp</u>
+    </string>
+    <string name="Update">
+    <u>Update</u>
+    </string>
+
+</resources>
